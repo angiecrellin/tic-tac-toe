@@ -1,0 +1,23 @@
+
+.game {
+	width:40rem;
+	height: 40rem;
+	margin: 0 auto;
+	text-align: center;
+}
+h1 {
+	font-size: 4em;
+	font-style: bold;
+}
+.gameBoard {
+	width: 20rem;
+	height: 20rem;
+	margin: 0 auto;
+}
+
+.cell {
+	border: 2px solid;
+	text-align: center;
+	font-size: 5rem;
+}
+
