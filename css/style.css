@@ -13,11 +13,14 @@ h1 {
 	width: 20rem;
 	height: 20rem;
 	margin: 0 auto;
+	table-layout: fixed;
 }
 
 .cell {
 	border: 2px solid;
 	text-align: center;
 	font-size: 5rem;
+	vertical-align: text-center;
+
 }
 
