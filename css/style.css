@@ -13,14 +13,18 @@ h1 {
 	width: 20rem;
 	height: 20rem;
 	margin: 0 auto;
+	border-collapse: collapse;
 	table-layout: fixed;
+	
 }
 
 .cell {
-	border: 2px solid;
-	text-align: center;
+	border: 5px solid;
 	font-size: 5rem;
-	vertical-align: text-center;
+	overflow: hidden;
+	
+		
+
 
 }
 
