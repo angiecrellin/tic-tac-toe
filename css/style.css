@@ -1,30 +1,38 @@
-
 .game {
-	width:40rem;
-	height: 40rem;
-	margin: 0 auto;
-	text-align: center;
+    width: 40rem;
+    height: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    
 }
+
 h1 {
-	font-size: 4em;
-	font-style: bold;
+    font-size: 4em;
+    font-style: bold;
 }
+
 .gameBoard {
-	width: 20rem;
-	height: 20rem;
-	margin: 0 auto;
-	border-collapse: collapse;
-	table-layout: fixed;
-	
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: yellow;
+    
 }
 
 .cell {
-	border: 5px solid;
-	font-size: 5rem;
-	overflow: hidden;
-	
-		
-
-
+	width: 33%;
+	height: 33%;
+    border: 5px solid;
+    font-size: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
+.button {
+    margin: 3rem 42rem;
+    background-color: yellow;
+    font-style:bold;
+
+}
