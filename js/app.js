@@ -1,6 +1,6 @@
 //disable after click
-//it's a tie over and over again
-
+//alerting it's a tie over and over again
+//stop game after somebody wins
 
 
 $(document).ready(function() {
@@ -22,12 +22,6 @@ $(document).ready(function() {
     }
 
     startGame();
-
-    /*function cellClick(cell) {
-    if (cell.innerHTML === "X" || cell.innerHTML === "O") {
-        return;
-    }
-}*/
 
 
     //taking turns 
@@ -96,6 +90,7 @@ $(document).ready(function() {
             } else if ($('.cell').text().length >= 9) {
                 alert('It\'s a Tie!');
             }
+    //something here to end game is any of the above. 
 
         }
     };
@@ -103,12 +98,14 @@ $(document).ready(function() {
 
     //new game
 
-    var newGame = function() {
+
+    function newGame() {
         $('.cell').text('');
     }
 
 
-    $('.button').click(newGame);
+
+    $('.button').click(newGame)
 
 
 
