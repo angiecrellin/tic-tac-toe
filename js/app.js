@@ -1,6 +1,4 @@
-//disable after click
-//alerting it's a tie over and over again
-//stop game after somebody wins
+
 
 
 $(document).ready(function() {
@@ -16,6 +14,7 @@ $(document).ready(function() {
         [0, 4, 8, ],
         [2, 4, 6, ]
     ];
+    var gameOver = false
 
     var startGame = function() {
         $('.cell').text('');
@@ -26,6 +25,13 @@ $(document).ready(function() {
 
     //taking turns 
     $('.gameBoard').find('.cell').on('click', function() {
+        if (gameOver === true) {
+            return;
+        }
+        if ($(this).text() !== '') {
+            alert('This space is already taken')
+            return;
+        }
 
         if (turn % 2 === 0) {
             $(this).text('X');
@@ -42,26 +48,7 @@ $(document).ready(function() {
 
     })
 
-    /*$('.cell').one('click', function(){
-        alert('That space is already taken')
-    })*/
 
-    /*$('.cell').bind('click', function() {
-       $(this).unbind('click');
-       alert('That space is already taken!');
-    });*/
-
-    /*$('.gameBoard').find('cell').on('click', function() {
-        if ('.cell' === 'X' || '.cell' === 'O') {
-            alert('That space is already taken');
-        }
-    })*/
-
-    $('.gameBoard').find('this').on('click', function() {
-        if ('this' === 'X' || 'this' === 'O') {
-            alert('That space is already taken');
-        }
-    })
 
 
     function getCellValue(cellNumber) {
@@ -83,14 +70,18 @@ $(document).ready(function() {
             }
             if (cellAnswer === 'XXX') {
                 alert('X Wins!')
+                gameOver = true
                 break;
             } else if (cellAnswer === 'OOO') {
                 alert('O Wins!')
+                gameOver = true
                 break;
             } else if ($('.cell').text().length >= 9) {
                 alert('It\'s a Tie!');
+                gameOver = true
+                break;
             }
-    //something here to end game is any of the above. 
+
 
         }
     };
@@ -101,6 +92,7 @@ $(document).ready(function() {
 
     function newGame() {
         $('.cell').text('');
+        gameOver = false
     }
 
 
